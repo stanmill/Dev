@@ -21,17 +21,13 @@ public class Stack<E> {
 		return lastElement;		
 	}
 	
-	int checkSize() {
-		return list.size();
-	}
+	int checkSize() {return list.size();}
 	
-	boolean isEmpty() {
-		return list.isEmpty();
-	}
+	boolean isEmpty() {return list.isEmpty();}
 	
 	E peek() {
 		
-		//if(list.isEmpty()) System.e();
+		if(list.isEmpty()) System.exit(0);
 		return list.lastElement();
 	}
 
