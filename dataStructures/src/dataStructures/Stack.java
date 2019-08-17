@@ -8,10 +8,7 @@ public class Stack<E> {
 	E element;
 	
 	
-	void push(E element) {
-		
-		list.add(element);	
-	}
+	void push(E element) {list.add(element);}
 	
 	E pop() {
 		
