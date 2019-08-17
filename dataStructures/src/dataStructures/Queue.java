@@ -12,8 +12,9 @@ public class Queue<E> {
 	}
 	
 	E poll() {
-		E element = list.firstElement();
-		list.remove(element);
+		E temp = list.firstElement();
+		E element = temp;
+		list.remove(temp);
 		
 		return element;
 	}
