@@ -25,5 +25,9 @@ public class Queue<E> {
 	boolean isEmpty() {
 		return list.isEmpty();
 	}
+	
+	E peek() {
+		return list.firstElement();
+	}
 
 }
