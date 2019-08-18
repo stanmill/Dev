@@ -12,14 +12,17 @@ public class Queue<E> {
 	}
 	
 	E poll() {
-		E temp = list.firstElement();
-		E firstElement = temp;
-		list.remove(temp);
+		
+		E firstElement = list.firstElement();
+		list.remove(firstElement);
 		
 		return firstElement;
 	}
 	
 	int checkSize() {
+		
+		 System.out.println("The curent queue size is "+list.size());
+		
 		return list.size();
 	}
 	

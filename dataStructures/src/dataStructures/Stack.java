@@ -20,21 +20,19 @@ public class Stack<E> {
 			System.err.println("There is nothing to remove in the stack");
 			return null;
 		}
-		E lastElement = list.lastElement();
-		list.remove(lastElement);
 		
+		E lastElement = list.lastElement();
+		list.remove(lastElement);		
 		System.out.println("Removed element "+lastElement);
 
-		return lastElement;				
-		
+		return lastElement;					
 	}
 	
 	int checkSize() {		
 		
 		System.out.println("The current stack size is "+list.size());
 
-		return list.size();
-		
+		return list.size();	
 	}
 	
 	boolean isEmpty() {
@@ -43,8 +41,7 @@ public class Stack<E> {
 		
 		else System.out.println("The stack is not empty");
 
-		return list.isEmpty();
-		
+		return list.isEmpty();	
 	}
 	
 	E peek() {
@@ -57,5 +54,4 @@ public class Stack<E> {
 		
 		return list.lastElement();
 	}
-
 }
