@@ -13,10 +13,10 @@ public class Queue<E> {
 	
 	E poll() {
 		E temp = list.firstElement();
-		E element = temp;
+		E firstElement = temp;
 		list.remove(temp);
 		
-		return element;
+		return firstElement;
 	}
 	
 	int checkSize() {
