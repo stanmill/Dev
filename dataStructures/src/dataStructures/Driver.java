@@ -6,15 +6,7 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		Stack<Integer> s = new Stack<Integer>();
-		
-		s.push(34);
-		s.push(44);
-		s.pop();
-		//s.pop();
-		//s.pop();
-		s.checkSize();
-		s.isEmpty();
-		s.peek();
+		Queue<Integer> q = new Queue<Integer>();
 		
 
 	}

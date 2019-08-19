@@ -10,19 +10,18 @@ public class Queue<E> {
 	void add(E element) {
 		
 		list.add(element);
-		System.out.println("Added element "+element);
-		
+		System.out.println("Added element "+element);	
 	}
 	
 	E poll() {
 		
 		if(list.isEmpty()) {
 			System.err.println("There is nothing to pull in the queue");
-			return null;
-			
+			return null;		
 		}
 		E firstElement = list.firstElement();
 		list.remove(firstElement);
+		System.out.println("Removed element "+firstElement);
 		
 		return firstElement;
 	}
