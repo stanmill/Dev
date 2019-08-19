@@ -8,11 +8,19 @@ public class Queue<E> {
 	E element;
 	
 	void add(E element) {
+		
 		list.add(element);
+		System.out.println("Added element "+element);
+		
 	}
 	
 	E poll() {
 		
+		if(list.isEmpty()) {
+			System.err.println("There is nothing to pull in the queue");
+			return null;
+			
+		}
 		E firstElement = list.firstElement();
 		list.remove(firstElement);
 		
@@ -27,10 +35,22 @@ public class Queue<E> {
 	}
 	
 	boolean isEmpty() {
+		
+		if(list.isEmpty()) System.out.println("The queue is empty");	
+		
+		else System.out.println("The queue is not empty");
+		
 		return list.isEmpty();
 	}
 	
 	E peek() {
+		
+		if(list.isEmpty()) { 
+			System.err.println("There is nothing to peek in the queue");
+			return null;
+		}
+		System.out.println("The current queue is "+list.firstElement());
+		
 		return list.firstElement();
 	}
 
