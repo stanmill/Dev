@@ -7,6 +7,8 @@ public class FirstProblemSet {
 		Fox f = new Fox();
 		a.sound();
 		f.sound();
+		String s = "stanmillz";
+		System.out.println(convert(s));
 
 	}
 	
@@ -28,6 +30,18 @@ public class FirstProblemSet {
 		 
 		  System.out.println("number of even numbers is " +even);
 		  System.out.println("number of odd numbers is " +odd);	     
+	}
+	
+	/* Create a method that takes a String and return the last three letters added to the
+	 * front and back of the string. Example: "python" would return "honpythonhon*/
+	
+	static String convert(String s) {
+		// pass in the string to the StringBuffer and takes the last three characters in the string
+		StringBuffer str = new StringBuffer(s);
+		String newString = str.substring(s.length()-3, s.length());
+		
+		// the new string gets concatenated and returned
+		return newString+s+newString;
 	}
 	
 	
