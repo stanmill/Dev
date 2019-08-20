@@ -70,6 +70,7 @@ public class FirstProblemSet {
 				j--;
 			}
 		}
+		// converts an array back to a string
 		s = String.valueOf(arr);
 		
 		return s;
