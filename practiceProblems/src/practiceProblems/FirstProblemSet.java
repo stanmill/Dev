@@ -7,8 +7,10 @@ public class FirstProblemSet {
 		Fox f = new Fox();
 		a.sound();
 		f.sound();
-		String s = "stanmillz";
+		String s = "stanmillz is awesome";
 		System.out.println(convert(s));
+		System.out.println(reverseInPlace(s));
+
 
 	}
 	
@@ -44,7 +46,34 @@ public class FirstProblemSet {
 		return newString+s+newString;
 	}
 	
+	/* Reverse a string while not altering the spaces*/
 	
-	
+	static String reverseInPlace(String s) {
+		// converts the string to a char array
+		char[] arr = s.toCharArray();
+		char temp=' ';
+		int j = s.length() -1;
+		for(int i=0; i<arr.length;i++) {
+			
+			if(i == j) {
+				break;
+			}
+			if(arr[i] == ' ') {
+				continue;
+			}else if(arr[j] == ' '){
+				j--;
+			}else {
+				// if there is no spaces interfering it switches both ends of the array
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				j--;
+			}
+		}
+		s = String.valueOf(arr);
+		
+		return s;
+	}
+		
 
 }
