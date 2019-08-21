@@ -8,7 +8,7 @@ public class FirstProblemSet {
 		a.sound();
 		f.sound();
 		String s = "stanmillz is awesome";
-		System.out.println(convert(s));
+		System.out.println(s);
 		System.out.println(reverseInPlace(s));
 
 
@@ -53,16 +53,14 @@ public class FirstProblemSet {
 		char[] arr = s.toCharArray();
 		char temp=' ';
 		int j = s.length() -1;
-		for(int i=0; i<arr.length;i++) {
+		
+		for(int i=0; i<j;i++) {
 			
-			if(i == j) {
-				break;
-			}
-			if(arr[i] == ' ') {
-				continue;
-			}else if(arr[j] == ' '){
-				j--;
-			}else {
+			if(arr[i] == ' ') continue;
+			
+			else if(arr[j] == ' ') j--;
+			
+			else {
 				// if there is no spaces interfering it switches both ends of the array
 				temp = arr[i];
 				arr[i] = arr[j];
