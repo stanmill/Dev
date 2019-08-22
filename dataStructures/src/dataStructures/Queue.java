@@ -20,7 +20,7 @@ public class Queue<E> {
 			return null;		
 		}
 		E firstElement = list.firstElement();
-		list.remove(firstElement);
+		list.remove(0);
 		System.out.println("Removed element "+firstElement);
 		
 		return firstElement;

@@ -22,7 +22,7 @@ public class Stack<E> {
 		}
 		
 		E lastElement = list.lastElement();
-		list.remove(lastElement);		
+		list.remove(list.size()-1);		
 		System.out.println("Removed element "+lastElement);
 
 		return lastElement;					
