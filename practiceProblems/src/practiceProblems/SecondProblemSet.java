@@ -4,7 +4,7 @@ public class SecondProblemSet {
 	
 	public static void main(String[] args) {
 		
-		String s = "aaaabbbbc";
+		String s = "abbrhcccc";
 		System.out.println(compress(s));
 	}
 	
@@ -14,13 +14,14 @@ public class SecondProblemSet {
 	static String compress(String s) {
 		
 		StringBuffer str = new StringBuffer();
-		char[] arr = s.toCharArray();
 		int count =0;
 		
-		for (int i = 0; i < arr.length-1; i++) {
-			count++;
-			if(arr[i] != arr[i+1]) {
-				 str.append(""+arr[i]+count);
+		for (int i = 0; i < s.length(); i++) {
+			count++;		
+			
+			if(i +1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
+				 str.append(s.charAt(i));
+				 str.append(count);
 					count = 0;
 			} 
 		}
