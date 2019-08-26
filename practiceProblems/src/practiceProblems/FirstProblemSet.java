@@ -11,10 +11,8 @@ public class FirstProblemSet {
 		System.out.println(s);
 		System.out.println(reverseInPlace(s));
 
-
 	}
-	
-	
+		
 	/* Create a method that print the number of even and odd numbers found in a array */
 	
 	static void count(int[] arr) {

@@ -2,26 +2,31 @@ package practiceProblems;
 
 public class SecondProblemSet {
 	
+	public static void main(String[] args) {
+		
+		String s = "aaaabbbbc";
+		System.out.println(compress(s));
+	}
+	
 	
 	/* Compress a string */
 	
-	String compress(String s) {
+	static String compress(String s) {
 		
 		StringBuffer str = new StringBuffer();
+		char[] arr = s.toCharArray();
 		int count =0;
 		
-		for (int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) == s.charAt(i+1)) {
-				count++;
-			} else {
-				str.append(s.charAt(i)+count);
-				count = 0;
-			}
+		for (int i = 0; i < arr.length-1; i++) {
+			count++;
+			if(arr[i] != arr[i+1]) {
+				 str.append(""+arr[i]+count);
+					count = 0;
+			} 
 		}
-		
-		s = str.toString();
-		
-		return s;
+		String newStr = str.toString();
+			
+		return newStr;
 	}
 
 }
