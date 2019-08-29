@@ -25,9 +25,8 @@ public class SecondProblemSet {
 					count = 0;
 			} 
 		}
-		String newStr = str.toString();
 			
-		return newStr;
+		return new String (str);
 	}
 
 }
