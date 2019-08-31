@@ -6,6 +6,7 @@ public class SecondProblemSet {
 		
 		String s = "abbrhcccc";
 		System.out.println(compress(s));
+		System.out.println(theNextPerfectSquare(30));
 	}
 	
 	
@@ -27,6 +28,17 @@ public class SecondProblemSet {
 		}
 			
 		return new String (str);
+	}
+	
+	 /* Return the next perfect square */
+	
+	static int theNextPerfectSquare(int n) {
+		
+		// function returns the ceiling of the square root
+		int sqr =  (int) Math.ceil(Math.sqrt(n));			
+		
+		// reverts the square root back to a perfect square
+		return sqr * sqr;
 	}
 
 }
