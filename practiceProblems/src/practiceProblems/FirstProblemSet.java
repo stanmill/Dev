@@ -3,13 +3,7 @@ package practiceProblems;
 public class FirstProblemSet {
 
 	public static void main(String[] args) {
-		Animal a  = new Animal();
-		Fox f = new Fox();
-		a.sound();
-		f.sound();
-		String s = "stanmillz is awesome";
-		System.out.println(s);
-		System.out.println(reverseInPlace(s));
+
 
 	}
 		
