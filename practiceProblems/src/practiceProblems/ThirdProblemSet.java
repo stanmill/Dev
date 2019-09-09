@@ -24,5 +24,19 @@ public class ThirdProblemSet {
 		
 		return false;
 	}
+	
+	/* Create a funciton which translates a given DNA string into RNA */
+	
+	static  String convertToRna(String dna) {
+		char[] arr = dna.toCharArray();
+	    
+	    for (int i = 0; i < arr.length; i++) {
+	    	if(arr[i] == 'T') {
+	    		arr[i] = 'U';
+	    	}	
+		}
+			String newDna = new String(arr);
+			return newDna;
+		}
 
 }
