@@ -38,5 +38,18 @@ public class ThirdProblemSet {
 			String newDna = new String(arr);
 			return newDna;
 		}
+	
+	/* Return the value based on the given operation */
+	
+	static Integer basicMath(String op, int v1, int v2) {
+	    
+		switch(op){
+	    case "+": return v1+v2;
+	    case "-": return v1-v2;
+	    case "*": return v1*v2;
+	    case "/": return v1/v2;  
+	    }
+	    return 0;
+	  }
 
 }
