@@ -6,12 +6,12 @@ public class FourthProblemSet {
 		// TODO Auto-generated method stub
 		int n = 10;
 		int[] arr = {-1000,1,4,50,-100, 200, 1000};
-		System.out.println(fibb(n));
+		System.out.println(fibb(8));
 		System.out.println(findTheLongest(arr));
+		System.out.println(calculateYears(1000,0.05,0.18,1000));
 
 	}
-	
-	
+		
 	/* Fibonacci series*/
 	
 	static int fibb(int n) {
@@ -47,5 +47,27 @@ public class FourthProblemSet {
 		
 		return currentNum;
 	}
+	
+	 /* caluculate the years it takes to get the desired amount*/
+	 static int calculateYears(double principal, double interest,  double tax, double desired) {
+		
+		 if(principal >= desired) return 0;
+		 
+	    double taxable = principal * interest; //5
+	    double newTax = taxable * tax;
+	    double x = taxable - newTax; //4.5 profit
+	    double finalAmount = principal + x;
+	    int numOfYears =1;
+	    
+	    while(finalAmount < desired){
+	      taxable = finalAmount * interest;
+	      newTax = taxable * tax;
+	      x = taxable - newTax;
+	      finalAmount = finalAmount + x;
+	      numOfYears++;
+	    
+	    }
+	    return numOfYears;
+	  }
 
 }
