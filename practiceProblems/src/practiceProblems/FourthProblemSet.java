@@ -9,6 +9,7 @@ public class FourthProblemSet {
 		System.out.println(fibb(8));
 		System.out.println(findTheLongest(arr));
 		System.out.println(calculateYears(1000,0.05,0.18,1000));
+		System.out.println(showSequence(4));
 
 	}
 		
@@ -69,5 +70,30 @@ public class FourthProblemSet {
 	    }
 	    return numOfYears;
 	  }
+	 
+	 /* print the sequence up to the actual value and include the sum*/
+	 public static String showSequence(int value){
+		 StringBuilder s = new StringBuilder();
+		    int total =0;
+		    int n =0;
+		    if(value < 0){ 
+		    	s.append(value+"<"+n);
+		    	return s.toString();}
+		    else if(value == 0){
+		    	s.append(value+"="+n);
+		    	return s.toString();
+		    }
+		    
+		    while(value >= 0 && n <= value){
+		    	total += n;
+		    	s.append(n);
+		    	if(n == value)break;
+		    		s.append("+");
+		    		n++;
+		    	}
+		    
+		    s.append(" = "+total);
+		    return s.toString();
+		  }
 
 }
