@@ -50,6 +50,7 @@ public class FourthProblemSet {
 	}
 	
 	 /* caluculate the years it takes to get the desired amount*/
+	
 	 static int calculateYears(double principal, double interest,  double tax, double desired) {
 		
 		 if(principal >= desired) return 0;
@@ -72,6 +73,7 @@ public class FourthProblemSet {
 	  }
 	 
 	 /* print the sequence up to the actual value and include the sum*/
+	 
 	 public static String showSequence(int value){
 		 StringBuilder s = new StringBuilder();
 		    int total =0;

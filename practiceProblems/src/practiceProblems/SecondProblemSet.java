@@ -5,9 +5,11 @@ public class SecondProblemSet {
 	public static void main(String[] args) {
 		
 		String s = "abbrhcccc";
+		int n = 100;
 		System.out.println(compress(s));
 		System.out.println(theNextPerfectSquare(50));
 		System.out.println(summation(5));
+		printPrimes(n);
 	}
 	
 	
@@ -55,5 +57,24 @@ public class SecondProblemSet {
         }
         return sum;
     }
+	
+	/* Print all the prime numbers from 1 - n*/
+	
+	static void printPrimes(int n) {
+		int flag;
+		
+		for(int i=2; i<=n; i++) {
+			flag =0;
+			
+			for(int j =2; j <= i/2; j++) {
+				if(i % j == 0) {
+					flag = 1;
+					break;
+				}
+			} 
+			if(flag == 0) System.out.println(i);
+		}
+		
+	}
 
 }
