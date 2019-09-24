@@ -32,14 +32,18 @@ public class FourthProblemSet {
 		int currentNum = 0;
 		int temp =0;
 		
+		// sort through the array
 		for(int i=0; i< numbers.length; i++) {
 			count =0;
+			// get the every number of the array
 			temp = numbers[i];
+			
 			while(temp != 0) {	
+				// remove the last digit and increase the count
 				temp /= 10;
 				count++;
 			}
-			
+			// if the new count is bigger than the current max then replace it
 			if(count > max) {
 				currentNum = numbers[i];
 				max = count;
@@ -53,8 +57,8 @@ public class FourthProblemSet {
 	
 	 static int calculateYears(double principal, double interest,  double tax, double desired) {
 		
-		 if(principal >= desired) return 0;
-		 
+		if(principal >= desired) return 0;
+		// the firsst calculation takes into account the first year
 	    double taxable = principal * interest; //5
 	    double newTax = taxable * tax;
 	    double x = taxable - newTax; //4.5 profit
