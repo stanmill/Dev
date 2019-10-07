@@ -21,5 +21,12 @@ public class FithProblemSet {
 		
 	    return false;
 	  }
+	
+	/* Return the perfect power*/
+	public static int[] isPerfectPower(int n) {
+		
+		return null;
+	    // ...
+	  }
 
 }
